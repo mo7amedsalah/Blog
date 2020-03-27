@@ -21869,3 +21869,140 @@ Processing by PostsController#show as HTML
 Completed 200 OK in 65ms (Views: 60.4ms | ActiveRecord: 1.9ms)
 
 
+Started GET "/posts/7" for ::1 at 2020-03-27 23:36:56 +0200
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/salah/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/salah/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:69
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/views/posts/show.html.erb:30
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/comments/_form.html.erb:12
+  Rendered comments/_form.html.erb (6.9ms)
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`post_id` = 7 ORDER BY created_at DESC[0m
+  ↳ app/views/posts/show.html.erb:55
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:56
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:56
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:56
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:56
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:56
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:56
+  Rendered posts/show.html.erb within layouts/application (37.2ms)
+Completed 200 OK in 338ms (Views: 262.2ms | ActiveRecord: 45.3ms)
+
+
+Started GET "/posts" for ::1 at 2020-03-27 23:37:00 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:19
+  Rendered posts/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 36ms (Views: 32.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2020-03-27 23:37:02 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:19
+  Rendered posts/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 40ms (Views: 36.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/posts/7" for ::1 at 2020-03-27 23:37:05 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:69
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/views/posts/show.html.erb:30
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/comments/_form.html.erb:12
+  Rendered comments/_form.html.erb (5.5ms)
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`post_id` = 7 ORDER BY created_at DESC[0m
+  ↳ app/views/posts/show.html.erb:55
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:56
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:56
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:56
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:56
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:56
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:56
+  Rendered posts/show.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 72ms (Views: 65.4ms | ActiveRecord: 2.3ms)
+
+
+Started DELETE "/comments/10" for ::1 at 2020-03-27 23:37:10 +0200
+Processing by CommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"oKreIB4f5Rtba1FKNwNQxNAmhStJuFVDiGkDpXsSlNlPDb5rLkOJMHsX6xT6Hzmi36YBfP+oMlRtk23tg3tAUA==", "id"=>"10"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:17:in `destroy'
+Started GET "/posts/7" for ::1 at 2020-03-27 23:38:19 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:69
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ app/views/posts/show.html.erb:30
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/comments/_form.html.erb:12
+  Rendered comments/_form.html.erb (4.4ms)
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`post_id` = 7 ORDER BY created_at DESC[0m
+  ↳ app/views/posts/show.html.erb:55
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:56
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:56
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:56
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:56
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:56
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:56
+  Rendered posts/show.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 55ms (Views: 48.9ms | ActiveRecord: 2.1ms)
+
+
+Started DELETE "/comments/11" for ::1 at 2020-03-27 23:38:20 +0200
+Processing by CommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"aKjvJi3d7lLE+tZWLLw35A0EVttWwUmoCvhQoi1JyguHD49tHYGCeeSGbAjhoF6CAoTSjODRLr/vAj7q1SAegg==", "id"=>"11"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:17:in `destroy'
